@@ -24,7 +24,7 @@ public class TaTest2 {
                 if (x == inputList.get(j))
                     freq++;
             }
-            if (freq > mode){
+            if (freq > maxFrequency){
                 num = x;
                 maxFrequency = freq;
             }
