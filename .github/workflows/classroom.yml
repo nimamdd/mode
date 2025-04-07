@@ -1,0 +1,25 @@
+name: Autograding
+
+on: [push]
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  autograding:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          
+      - name: Run Autograding
+        uses: education/autograding@v1
