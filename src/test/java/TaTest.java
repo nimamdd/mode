@@ -32,7 +32,7 @@ public class TaTest {
 
         sb.append(num);
         sb.append(" ");
-        sb.append(mode);
+        sb.append(maxFrequency);
 
         return sb.toString().trim();
     }
